@@ -1,12 +1,10 @@
-var PlayListOptionView.js = Backbone.View.extend({
+var PlayListOptionView = Backbone.View.extend({
 
-  tagName: '',
-
-  template: _.template('<option value="'+name+'">'+name+'</option>' ),
-
+  tagName: 'option',
 
   render: function(){
-    return this.$el.html(this.template());
+    console.log(this.options.name);
+    return this.$el.html(this.options.name).attr('value',this.options.name);
   }
 
 });
