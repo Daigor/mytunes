@@ -32,9 +32,6 @@ var PlayListView = Backbone.View.extend({
     //var $select = $('<select/>').append('<options val="default">default</options>');
     this.$el.attr('id', 'playlist').append(
       _.map(that, function(value, key){
-        console.log(that);
-        console.log(value);
-        console.log(key);
         return new PlayListOptionView({name: key}).render();
       })
     );

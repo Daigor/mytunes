@@ -13,8 +13,6 @@ var AppModel = Backbone.Model.extend({
     }, this);
 
     this.get('songQueue').on('changedPlaylist',function(event){
-      console.log(event.idx);
-      console.log(event.value);
       if(event.idx === 1){
         this.playlists[event.value] = new SongQueue();
       } else {
